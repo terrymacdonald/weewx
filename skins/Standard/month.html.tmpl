@@ -402,7 +402,11 @@
           <img src="monthwind.png" alt="wind" />
           <img src="monthbarometer.png" alt="barometer"/>
           <img src="monthwinddir.png" alt="Hi Wind" />
-          <img src="monthinside.png" alt="Inside" />
+          <img src="monthinside.png" alt="Inside Temperature" />
+          #if $month.inHumidity.has_data
+          <img src="monthhumidityin.png" alt="Inside Humidity" />
+          #end if
+
           <img src="monthwindvec.png" alt="Wind Vector" />
           #if $month.radiation.has_data
           <img src="monthradiation.png" alt="Radiation" />
