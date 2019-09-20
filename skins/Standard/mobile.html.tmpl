@@ -68,6 +68,16 @@
 	<tr>            
 		<td>High Wind Speed:</td><td class="data"> $day.wind.max at $day.wind.maxtime </td>
 	</tr>
+	#if $day.inTemp.has_data
+	<tr>
+		<td>Inside Temperature:</td><td class="data"> $current.inTemp </td></tr>
+	</tr>
+	#end if
+	#if $day.inHumidity.has_data
+	<tr>
+		<td>Inside Humidity:</td><td class="data"> $current.inHumidity </td></tr>
+	</tr>
+	#end if
     </table>
 </div>
 
