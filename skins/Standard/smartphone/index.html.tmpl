@@ -26,6 +26,12 @@
         <li><a href="rain.html">Rain: $current.rainRate ($day.rain.sum)</a></li>
 	<li><a href="barometer.html">Barometer: $current.barometer</a></li>
 	<li><a href="wind.html">Wind: $current.windSpeed from $current.windDir</a></li>
+	#if $day.inTemp.has_data
+        <li><a href="temp_inside.html">Temp: $current.inTemp [$day.inTemp.min, $day.inTemp.max]</a></li>
+	#end if
+	#if $day.inHumidity.has_data
+        <li><a href="humidity_inside.html">Temp: $current.inHumidity [$day.inHumidity.min, $day.inHumidity.max]</a></li>
+	#end if
       </ul>
 
       <ul data-role="listview" data-inset="true" data-divider-theme="b">
