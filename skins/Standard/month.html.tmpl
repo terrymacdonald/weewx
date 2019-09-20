@@ -156,6 +156,18 @@
                   $month.inTemp.min at $month.inTemp.mintime
                 </td>
               </tr>
+              #if $month.inHumidity.has_data
+              <tr>
+                <td class="stats_label">
+                  High Inside Humidity<br/>
+                  Low Inside Humidity
+                </td>
+                <td class="stats_data">
+                  $month.inHumidity.max at $month.inHumidity.maxtime<br/>
+                  $month.inHumidity.min at $month.inHumidity.mintime
+                </td>
+              </tr>
+              #end if
               #if $month.UV.has_data
               <tr>
                 <td class="stats_label">
@@ -323,6 +335,18 @@
                   $year.inTemp.min at $year.inTemp.mintime
                 </td>
               </tr>
+              #if $year.inHumidity.has_data
+              <tr>
+                <td class="stats_label">
+                  High Inside Humidity<br/>
+                  Low Inside Humidity
+                </td>
+                <td class="stats_data">
+                  $year.inHumidity.max at $year.inHumidity.maxtime<br/>
+                  $year.inHumidity.min at $year.inHumidity.mintime
+                </td>
+              </tr>
+              #end if
               #if $year.UV.has_data
               <tr>
                 <td class="stats_label">
