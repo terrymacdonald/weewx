@@ -85,6 +85,12 @@
                 <td class="stats_label">Inside Temperature</td>
                 <td class="stats_data">$current.inTemp</td>
               </tr>
+              #if $day.inHumidity.has_data
+              <tr>
+                <td class="stats_label">Inside Humidity</td>
+                <td class="stats_data">$current.inHumidity</td>
+              </tr>
+              #end if
               #if $day.UV.has_data
               <tr>
                 <td class="stats_label">UV</td>
@@ -219,6 +225,18 @@
                   $day.inTemp.min at $day.inTemp.mintime
                 </td>
               </tr>
+              #if $day.inHumidity.has_data
+              <tr>
+                <td class="stats_label">
+                  High Inside Humidity<br/>
+                  Low Inside Humidity
+                </td>
+                <td class="stats_data">
+                  $day.inHumidity.max at $day.inHumidity.maxtime<br/>
+                  $day.inHumidity.min at $day.inHumidity.mintime
+                </td>
+              </tr>
+              #end if
               #if $day.UV.has_data
               <tr>
                 <td class="stats_label">
