@@ -31,6 +31,12 @@
         <li><a href="humidity.html">Humidity: $current.outHumidity [$day.outHumidity.min, $day.outHumidity.max]</a></li>
         <li><a href="rain.html">Rain: $current.rainRate ($day.rain.sum)</a></li>
 	<li><a href="wind.html">Wind: $current.windSpeed from $current.windDir.ordinal_compass ($current.windDir)</a></li>
+	#if $day.inTemp.has_data
+	<li><a href="intemp.html">Inside Temperature: $current.inTemp [$day.inTemp.min, $day.inTemp.max]</a></li>
+	#end if
+	#if $day.inHumidity.has_data
+        <li><a href="inhumidity.html">Inside Humidity: $current.inHumidity [$day.inHumidity.min, $day.inHumidity.max]</a></li>
+	#end if
       </ul>
       #if $Extras.has_key('radar_img') and $Extras.has_key('radar_url')
     </div>
