@@ -1,0 +1,40 @@
+#encoding UTF-8
+<!DOCTYPE html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <title>Inside temperature in $station.location</title>
+  <link rel="stylesheet" href="https://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.css" />
+  <script src="https://code.jquery.com/jquery-1.7.1.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <div data-role="page" data-add-back-btn="true" data-theme="a">
+    <div data-role="header">
+      <h1>Inside temperature</h1>
+    </div>
+    <div data-role="content">
+      <h4>24h temperature</h4>
+      <img src="dayinside.png"/>
+      <p>
+	min: $day.inTemp.min at $day.inTemp.mintime<br/>
+	max: $day.inTemp.max at $day.inTemp.maxtime
+      </p>
+      <h4>7-day temperature</h4>
+      <img src="weekinside.png"/>
+      <p>
+	min: $week.inTemp.min at $week.inTemp.mintime<br/>
+	max: $week.inTemp.max at $week.inTemp.maxtime
+      </p>
+      <h4>30-day temperature</h4>
+      <img src="monthinside.png"/>
+      <p>
+	min: $month.inTemp.min at $month.inTemp.mintime<br/>
+	max: $month.inTemp.max at $month.inTemp.maxtime
+      </p>
+    </div>
+    <div data-role="footer">
+      <h4>weewx v$station.version</h4>
+    </div>
+  </div>
+</body>
