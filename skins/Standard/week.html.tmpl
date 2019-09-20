@@ -402,7 +402,10 @@
           <img src="weekwind.png" alt="wind" />
           <img src="weekbarometer.png" alt="barometer"/>
           <img src="weekwinddir.png" alt="Hi Wind" />
-          <img src="weekinside.png" alt="Inside" />
+          <img src="weekinside.png" alt="Inside Temperature" />
+          #if $week.inHumidity.has_data
+          <img src="weekhumidityin.png" alt="Inside Humidity" />
+          #end if
           <img src="weekwindvec.png" alt="Wind Vector" />
           #if $week.radiation.has_data
           <img src="weekradiation.png" alt="Radiation" />
